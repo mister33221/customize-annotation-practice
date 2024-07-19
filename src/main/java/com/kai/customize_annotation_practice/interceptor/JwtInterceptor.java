@@ -9,8 +9,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-@Component
-@AllArgsConstructor
 /*
 HandlerInterceptor接口用於攔截處理器的執行。
 可以在控制器（Controller）處理請求之前、之後以及完成請求處理後（即渲染視圖之後）進行自定義的操作。
@@ -25,6 +23,8 @@ postHandle(HttpServletRequest request, HttpServletResponse response, Object hand
 afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)：
 在完成請求處理後調用，這時可以進行資源清理等操作。
  */
+@Component
+@AllArgsConstructor
 public class JwtInterceptor implements HandlerInterceptor {
 
     private JwtUtil jwtUtil;

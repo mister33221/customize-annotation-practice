@@ -12,7 +12,6 @@ import java.lang.annotation.Target;
 ElementType是一個枚舉，它還包括了其他值，
 如TYPE（可以應用於類或接口）、FIELD（可以應用於字段）等。
  */
-@Target(ElementType.METHOD)
 /*
 @Retention註解指定了RequireJwt註解的保留策略，
 即這個註解在什麼時候有效。在這個例子中，
@@ -23,7 +22,6 @@ ElementType是一個枚舉，它還包括了其他值，
 SOURCE（註解只在源碼中保留，並在編譯時被丟棄）和
 CLASS（註解在編譯時被保留，但在運行時不可用）。
  */
-@Retention(RetentionPolicy.RUNTIME)
 /*
 interface
 是用來定義一個介面，裡面可以包含方法、屬性、類等等。可以實作，也可以不實作，
@@ -31,6 +29,8 @@ interface
 @interface
 是專門用來定義 Annotation 的，
  */
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface RequireJwt {
 }
 
