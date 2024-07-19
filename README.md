@@ -37,9 +37,9 @@ public String protectedResource() {
 2. 然後在瀏覽器出入 `http://localhost:8080/swagger-ui.html` 來開啟我們的 Swagger UI。
 
 3. 第一步直接點擊 `protected-resource` 這個 API，會發現我們沒有 token，所以會被拒絕存取。
-![img.png](img.png)
-4. 那我們就來使用 `generate-token` 產生一個 token，
 ![img_1.png](img_1.png)
+4. 那我們就來使用 `generate-token` 產生一個 token，
+![img.png](img.png)
 5. 把這個 token 複製下來，然後到右上角，會看到一個 `Authorize` 的按鈕，點進去之後，把 token 貼上去，然後按下 `Authorize`。
 這樣我們就會在接下來的 Request 的 Header 裡面帶上一個叫做 `Authorization` 的 Header，裡面的值就是我們剛剛貼上去的 token。
 ![img_2.png](img_2.png)
